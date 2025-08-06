@@ -3,18 +3,29 @@
 [![Build Status](https://github.com/vishal-ahirwar/Bitcoin-Exchange-Rate-Cpp/actions/workflows/ci.yml/badge.svg)](https://github.com/vishal-ahirwar/Bitcoin-Exchange-Rate-Cpp/actions)
 [![Release](https://img.shields.io/github/release/vishal-ahirwar/Bitcoin-Exchange-Rate-Cpp.svg)](https://github.com/vishal-ahirwar/Bitcoin-Exchange-Rate-Cpp/releases)
 
-Real-time Bitcoin prices in 30+ currencies from your terminal.
+Live real-time Bitcoin prices in 30+ currencies from your terminal.
 
 **Made by [Vishal Ahirwar](https://github.com/vishal-ahirwar)**
 
 ## Usage
 
 ```bash
+# Live real-time updates (default)
 brt
+
+# Single fetch and exit
+brt --once
+
+# Custom refresh interval (minimum 5 seconds)
+brt --interval 60
+
+# Help
+brt --help
 ```
 
+**Live Mode Output:**
 ```
-Fetching latest data .
+🟡 LIVE Bitcoin Rates (Update #3 at 14:32:15)
 1 BTC =
 
 Symbol |         15m |        Last |         Buy |        Sell
@@ -22,7 +33,9 @@ Symbol |         15m |        Last |         Buy |        Sell
 ARS    | 153390084.45| 153390084.45| 153390084.45| 153390084.45
 AUD    |    177148.79|    177148.79|    177148.79|    177148.79
 USD    |    115182.17|    115182.17|    115182.17|    115182.17
-...
+
+Press Ctrl+C to exit • Auto-refresh every 30s
+Next update in 5s...
 ```
 
 ## Installation
@@ -41,4 +54,3 @@ sage compile
 ## License
 
 MIT
-<img width="1055" height="812" alt="image" src="https://github.com/user-attachments/assets/4860cbbf-1869-4310-9458-03148f402f47" />
