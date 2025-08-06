@@ -11,9 +11,16 @@ class CurlHandler
 public:
   CurlHandler();
   void setUrl(const std::string &url);
-  CURLcode fetch() const;
-  const std::string getFetchedData() const;
 
+  const std::string getFetchedData() const;
+public:
+    // ... your existing public methods ...
+    
+    // Debug method to print response information
+    void printDebugInfo() const;
+    
+    // Modified fetch method signature (remove const if it was const)
+    CURLcode fetch();  // Note: removed const since we're modifying data
 private:
   curl_ptr curlptr;
   std::string data{};
