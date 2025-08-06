@@ -1,4 +1,5 @@
 [requires]
+fmt/11.2.0
 nlohmann_json/3.12.0
 libcurl/8.15.0
 [generators]

@@ -5,6 +5,7 @@ CurlHandler::CurlHandler() : curlptr(curl_easy_init(), deleter)
 {
 
     curl_global_init(CURL_GLOBAL_ALL);
+    curl_easy_setopt(this->curlptr.get(), CURLOPT_SSL_VERIFYPEER, 0L);
     curl_easy_setopt(this->curlptr.get(),CURLOPT_WRITEFUNCTION,dataHandler);
     curl_easy_setopt(this->curlptr.get(),CURLOPT_WRITEDATA,&(this->data));
 };

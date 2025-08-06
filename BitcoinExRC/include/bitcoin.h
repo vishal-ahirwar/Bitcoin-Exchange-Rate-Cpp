@@ -7,7 +7,7 @@
 #include <string>
 #include <cstdio>
 #include "curlHandler.h"
-#include"json.hpp"
+#include<nlohmann/json.hpp>
 
 class BitCoin
 {
