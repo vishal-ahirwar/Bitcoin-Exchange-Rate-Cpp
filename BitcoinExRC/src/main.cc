@@ -1,9 +1,12 @@
 // Copyright(c)2022 Vishal Ahirwar.
+#include <barkeep/barkeep.h>
 #include <fmt/color.h>
 #include <fmt/core.h>
 
 #include "../include/bitcoin.h"
 
+using namespace std::chrono_literals;
+namespace bk = barkeep;
 
 using json = nlohmann::json;
 void printColoredTable(const nlohmann::json& data) {
@@ -28,8 +31,10 @@ void printColoredTable(const nlohmann::json& data) {
 int main(void) {
   using namespace std;
   try {
+    auto anim = bk::Animation({.message = "Fetching latest data"});
     BitCoin bitcoin;
     json bitCoinData = bitcoin.fetch();
+    anim->done();
     printColoredTable(bitCoinData);
   } catch (std::exception& e) {
     std::cout << e.what() << std::endl;
