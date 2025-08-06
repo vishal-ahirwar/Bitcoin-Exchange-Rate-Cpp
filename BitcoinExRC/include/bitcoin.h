@@ -1,3 +1,5 @@
+#define NOMINMAX
+
 #ifndef BITCOIN_H
 #define BITCOIN_H
 //Copyright(c)2022 Vishal Ahirwar.

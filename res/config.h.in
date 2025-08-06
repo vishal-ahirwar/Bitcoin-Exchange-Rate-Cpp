@@ -1,0 +1,10 @@
+#ifndef __BitcoinExRC__
+    #define __BitcoinExRC__
+#include <string_view>
+namespace Project {
+    constexpr std::string_view VERSION_STRING = "@BitcoinExRC_VERSION_MAJOR@.@BitcoinExRC_VERSION_MINOR@.@BitcoinExRC_VERSION_PATCH@";
+    constexpr std::string_view COMPANY_NAME = "@COMPANY@";
+    constexpr std::string_view COPYRIGHT_STRING = "@COPYRIGHT@";
+    constexpr std::string_view PROJECT_NAME = "@PROJECT_NAME@";
+}
+#endif
